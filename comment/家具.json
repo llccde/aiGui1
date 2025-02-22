@@ -1,0 +1,531 @@
+{
+    "furniture-in-room": {
+        "room_list": [
+            {
+                "name": "客厅",
+                "furniture": [
+                    {
+                        "name": "智能电视",
+                        "type": "娱乐",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭电视",
+                                "data_api_name": "tv_power_living_room"
+                            },
+                            {
+                                "name": "亮度",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节亮度"
+                            },
+                            {
+                                "name": "频道",
+                                "type": "enum",
+                                "enum": ["CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV6", "CCTV7", "CCTV8", "CCTV9", "CCTV10"],
+                                "description": "调节频道"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "空调",
+                        "type": "环境",
+                        "status": [
+                            {
+                                "name": "温度",
+                                "type": "int",
+                                "range": [16, 30],
+                                "description": "调节温度"
+                            },
+                            {
+                                "name": "模式",
+                                "type": "enum",
+                                "range": ["制冷", "制热", "除湿", "送风"],
+                                "description": "选择空调模式"
+                            },
+                            {
+                                "name": "风速",
+                                "type": "enum",
+                                "range": ["低", "中", "高"],
+                                "description": "调节风速"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "电风扇",
+                        "type": "环境",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭电风扇"
+                            },
+                            {
+                                "name": "风速",
+                                "type": "enum",
+                                "range": ["低", "中", "高"],
+                                "description": "调节风速"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "吊灯",
+                        "type": "照明",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭吊灯"
+                            },
+                            {
+                                "name": "亮度",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节亮度"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "音响",
+                        "type": "娱乐",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭音响"
+                            },
+                            {
+                                "name": "音量",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节音量"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "卧室",
+                "furniture": [
+                    {
+                        "name": "电动窗帘",
+                        "type": "环境",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭窗帘"
+                            },
+                            {
+                                "name": "位置",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节窗帘位置"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "空调",
+                        "type": "环境",
+                        "status": [
+                            {
+                                "name": "温度",
+                                "type": "int",
+                                "range": [16, 30],
+                                "description": "调节温度"
+                            },
+                            {
+                                "name": "模式",
+                                "type": "enum",
+                                "range": ["制冷", "制热", "除湿", "送风"],
+                                "description": "选择空调模式"
+                            },
+                            {
+                                "name": "风速",
+                                "type": "enum",
+                                "range": ["低", "中", "高"],
+                                "description": "调节风速"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "吊灯",
+                        "type": "照明",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭吊灯"
+                            },
+                            {
+                                "name": "亮度",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节亮度"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "加湿器",
+                        "type": "环境",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭加湿器"
+                            },
+                            {
+                                "name": "湿度",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节湿度"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "床头灯",
+                        "type": "照明",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭床头灯"
+                            },
+                            {
+                                "name": "亮度",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节亮度"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "电视",
+                        "type": "娱乐",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭电视"
+                            },
+                            {
+                                "name": "亮度",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节亮度"
+                            },
+                            {
+                                "name": "频道",
+                                "type": "enum",
+                                "range": ["CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV6", "CCTV7", "CCTV8", "CCTV9", "CCTV10"],
+                                "description": "调节频道"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "音响",
+                        "type": "娱乐",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭音响"
+                            },
+                            {
+                                "name": "音量",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节音量"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "厨房",
+                "furniture":[
+                    {
+                        "name": "电磁炉",
+                        "type": "厨具",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭电磁炉"
+                            },
+                            {
+                                "name": "火力",
+                                "type": "int",
+                                "range": [0, 10],
+                                "description": "调节火力"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "电饭煲",
+                        "type": "厨具",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭电饭煲"
+                            },
+                            {
+                                "name": "模式",
+                                "type": "enum",
+                                "range": ["煮饭", "煮粥", "保温"],
+                                "description": "选择电饭煲模式"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "电烤箱",
+                        "type": "厨具",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭电烤箱"
+                            },
+                            {
+                                "name": "温度",
+                                "type": "int",
+                                "range": [100, 250],
+                                "description": "调节温度"
+                            },
+                            {
+                                "name": "时间",
+                                "type": "int",
+                                "range": [0, 60],
+                                "description": "设置烘烤时间"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "抽油烟机",
+                        "type": "环境",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭抽油烟机"
+                            },
+                            {
+                                "name": "风速",
+                                "type": "enum",
+                                "range": ["低", "中", "高"],
+                                "description": "调节风速"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name":"浴室",
+                "furniture": [
+                    {
+                        "name": "热水器",
+                        "type": "洗浴",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭热水器"
+                            },
+                            {
+                                "name": "温度",
+                                "type": "int",
+                                "range": [30, 75],
+                                "description": "调节水温"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "浴霸",
+                        "type": "洗浴",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭浴霸"
+                            },
+                            {
+                                "name": "风速",
+                                "type": "enum",
+                                "range": ["低", "中", "高"],
+                                "description": "调节风速"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "洗衣机",
+                        "type": "人居"
+                    },
+                    {
+                        "name": "智能马桶",
+                        "type": "人居"
+                    }
+                ]
+            },
+            {
+                "name": "儿童房",
+                "furniture":[
+                    {
+                        "name": "空调",
+                        "type": "环境",
+                        "status": [
+                            {
+                                "name": "温度",
+                                "type": "int",
+                                "range": [16, 30],
+                                "description": "调节温度"
+                            },
+                            {
+                                "name": "模式",
+                                "type": "enum",
+                                "range": ["制冷", "制热", "除湿", "送风"],
+                                "description": "选择空调模式"
+                            },
+                            {
+                                "name": "风速",
+                                "type": "enum",
+                                "range": ["低", "中", "高"],
+                                "description": "调节风速"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "吊灯",
+                        "type": "照明",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭吊灯"
+                            },
+                            {
+                                "name": "亮度",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节亮度"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "电视",
+                        "type": "娱乐",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭电视"
+                            },
+                            {
+                                "name": "亮度",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节亮度"
+                            },
+                            {
+                                "name": "频道",
+                                "type": "enum",
+                                "range": ["CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV6", "CCTV7", "CCTV8", "CCTV9", "CCTV10"],
+                                "description": "调节频道"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "音响",
+                        "type": "娱乐",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭音响"
+                            },
+                            {
+                                "name": "音量",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节音量"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "监控探头",
+                        "type": "安全"
+                    }
+                ]
+            },
+            {
+                "name": "书房",
+                "furniture":[
+                    {
+                        "name": "空调",
+                        "type": "环境",
+                        "status": [
+                            {
+                                "name": "温度",
+                                "type": "int",
+                                "range": [16, 30],
+                                "description": "调节温度"
+                            },
+                            {
+                                "name": "模式",
+                                "type": "enum",
+                                "range": ["制冷", "制热", "除湿", "送风"],
+                                "description": "选择空调模式"
+                            },
+                            {
+                                "name": "风速",
+                                "type": "enum",
+                                "range": ["低", "中", "高"],
+                                "description": "调节风速"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "吊灯",
+                        "type": "照明",
+                        "status": [
+                            {
+                                "name": "开启",
+                                "type": "bool",
+                                "description": "开启或关闭吊灯"
+                            },
+                            {
+                                "name": "亮度",
+                                "type": "int",
+                                "range": [0, 100],
+                                "description": "调节亮度"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "电脑",
+                        "type": "办公"
+                    },
+                    {
+                        "name": "路由器",
+                        "type": "办公"
+                    },
+                    {
+                        "name": "打印机",
+                        "type": "办公"
+                    }
+                ]
+            },
+            {
+                "name": "中性空间",
+                "furniture":[
+                    {
+                        "name": "智能门禁",
+                        "type": "安全"
+                    }
+                ]
+            }
+            
+        ]
+    }
+}
