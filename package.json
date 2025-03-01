@@ -15,10 +15,12 @@
     "a1": "file:",
     "autoprefixer": "^10.4.20",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1",
     "postcss": "^8.5.3",
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@types/jquery": "^3.5.32",
     "@vitejs/plugin-vue": "^5.2.1",
     "tailwindcss": "^4.0.7",
     "vite": "^6.0.11",

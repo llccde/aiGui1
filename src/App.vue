@@ -1,12 +1,11 @@
 <script lang="ts" setup>
-import ContainerLight from './components/container_light.vue'
-import BoolState from './components/boolState.vue';
-import enumState from './components/enumState.vue';
-import intState from './components/intState.vue';
-import furnture from './components/furnture.vue';
-import { provide, ref } from 'vue';
-provide('isDebug', ref(true));
 
+import JSONLoader from './components/JSONLoader.vue';
+import { provide, ref } from 'vue';
+import Manager from './components/Manager.vue';
+import FlagOutput from  "./ts/FlagOutPut";
+import ApiTest from './components/ApiTest.vue';
+provide('isDebug', ref(true));
 </script>
 
 <template>
@@ -15,13 +14,13 @@ provide('isDebug', ref(true));
   </header>
 
   <main>
+    
     <div id="app" style="height: 100vh; width: 100vw;">
-      <furnture>
-        <boolState />
-        <enumState />
-        <intState />
-      </furnture>
-
+      <Manager >  
+        <JSONLoader />
+      </Manager>
+      <!-- <ApiTest /> -->
+      
     </div>
   </main>
 </template>
@@ -29,3 +28,5 @@ provide('isDebug', ref(true));
 <style scoped>
 
 </style>
+
+
