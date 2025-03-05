@@ -1,0 +1,719 @@
+{
+    "room_list": [
+        {
+            "name": "客厅",
+            "furniture": [
+                {
+                    "name": "智能电视",
+                    "type": "娱乐",
+                    "unique_id": "smart_tv_living_room",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭电视",
+                            "data_api_name": "tv_power_living_room"
+                        },
+                        {
+                            "name": "亮度",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节亮度",
+                            "data_api_name": "tv_brightness_living_room"
+                        },
+                        {
+                            "name": "频道",
+                            "type": "enum",
+                            "range": ["CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV6", "CCTV7", "CCTV8", "CCTV9", "CCTV10"],
+                            "description": "调节频道",
+                            "data_api_name": "tv_channel_living_room"
+                        }
+                    ]
+                },
+                {
+                    "name": "空调",
+                    "type": "环境",
+                    "unique_id": "ac_living_room",
+                    "status": [
+                        {
+                            "name": "温度",
+                            "type": "int",
+                            "range": [16, 30],
+                            "description": "调节温度",
+                            "data_api_name": "ac_temperature_living_room"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["制冷", "制热", "除湿", "送风"],
+                            "description": "选择空调模式",
+                            "data_api_name": "ac_mode_living_room"
+                        },
+                        {
+                            "name": "风速",
+                            "type": "enum",
+                            "range": ["低", "中", "高"],
+                            "description": "调节风速",
+                            "data_api_name": "ac_fan_speed_living_room"
+                        }
+                    ]
+                },
+                {
+                    "name": "电风扇",
+                    "type": "环境",
+                    "unique_id": "fan_living_room",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭电风扇",
+                            "data_api_name": "fan_power_living_room"
+                        },
+                        {
+                            "name": "风速",
+                            "type": "enum",
+                            "range": ["低", "中", "高"],
+                            "description": "调节风速",
+                            "data_api_name": "fan_speed_living_room"
+                        }
+                    ]
+                },
+                {
+                    "name": "吊灯",
+                    "type": "照明",
+                    "unique_id": "chandelier_living_room",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭吊灯",
+                            "data_api_name": "chandelier_power_living_room"
+                        },
+                        {
+                            "name": "亮度",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节亮度",
+                            "data_api_name": "chandelier_brightness_living_room"
+                        }
+                    ]
+                },
+                {
+                    "name": "音响",
+                    "type": "娱乐",
+                    "unique_id": "speaker_living_room",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭音响",
+                            "data_api_name": "speaker_power_living_room"
+                        },
+                        {
+                            "name": "音量",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节音量",
+                            "data_api_name": "speaker_volume_living_room"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "卧室",
+            "furniture": [
+                {
+                    "name": "电动窗帘",
+                    "type": "环境",
+                    "unique_id": "curtain_bedroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭窗帘",
+                            "data_api_name": "curtain_power_bedroom"
+                        },
+                        {
+                            "name": "位置",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节窗帘位置",
+                            "data_api_name": "curtain_position_bedroom"
+                        }
+                    ]
+                },
+                {
+                    "name": "空调",
+                    "type": "环境",
+                    "unique_id": "ac_bedroom",
+                    "status": [
+                        {
+                            "name": "温度",
+                            "type": "int",
+                            "range": [16, 30],
+                            "description": "调节温度",
+                            "data_api_name": "ac_temperature_bedroom"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["制冷", "制热", "除湿", "送风"],
+                            "description": "选择空调模式",
+                            "data_api_name": "ac_mode_bedroom"
+                        },
+                        {
+                            "name": "风速",
+                            "type": "enum",
+                            "range": ["低", "中", "高"],
+                            "description": "调节风速",
+                            "data_api_name": "ac_fan_speed_bedroom"
+                        }
+                    ]
+                },
+                {
+                    "name": "吊灯",
+                    "type": "照明",
+                    "unique_id": "chandelier_bedroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭吊灯",
+                            "data_api_name": "chandelier_power_bedroom"
+                        },
+                        {
+                            "name": "亮度",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节亮度",
+                            "data_api_name": "chandelier_brightness_bedroom"
+                        }
+                    ]
+                },
+                {
+                    "name": "加湿器",
+                    "type": "环境",
+                    "unique_id": "humidifier_bedroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭加湿器",
+                            "data_api_name": "humidifier_power_bedroom"
+                        },
+                        {
+                            "name": "湿度",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节湿度",
+                            "data_api_name": "humidifier_humidity_bedroom"
+                        }
+                    ]
+                },
+                {
+                    "name": "床头灯",
+                    "type": "照明",
+                    "unique_id": "bedside_lamp_bedroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭床头灯",
+                            "data_api_name": "bedside_lamp_power_bedroom"
+                        },
+                        {
+                            "name": "亮度",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节亮度",
+                            "data_api_name": "bedside_lamp_brightness_bedroom"
+                        }
+                    ]
+                },
+                {
+                    "name": "电视",
+                    "type": "娱乐",
+                    "unique_id": "tv_bedroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭电视",
+                            "data_api_name": "tv_power_bedroom"
+                        },
+                        {
+                            "name": "亮度",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节亮度",
+                            "data_api_name": "tv_brightness_bedroom"
+                        },
+                        {
+                            "name": "频道",
+                            "type": "enum",
+                            "range": ["CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV6", "CCTV7", "CCTV8", "CCTV9", "CCTV10"],
+                            "description": "调节频道",
+                            "data_api_name": "tv_channel_bedroom"
+                        }
+                    ]
+                },
+                {
+                    "name": "音响",
+                    "type": "娱乐",
+                    "unique_id": "speaker_bedroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭音响",
+                            "data_api_name": "speaker_power_bedroom"
+                        },
+                        {
+                            "name": "音量",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节音量",
+                            "data_api_name": "speaker_volume_bedroom"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "厨房",
+            "furniture": [
+                {
+                    "name": "电磁炉",
+                    "type": "厨具",
+                    "unique_id": "induction_cooker_kitchen",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭电磁炉",
+                            "data_api_name": "induction_cooker_power_kitchen"
+                        },
+                        {
+                            "name": "火力",
+                            "type": "int",
+                            "range": [0, 10],
+                            "description": "调节火力",
+                            "data_api_name": "induction_cooker_power_level_kitchen"
+                        }
+                    ]
+                },
+                {
+                    "name": "电饭煲",
+                    "type": "厨具",
+                    "unique_id": "rice_cooker_kitchen",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭电饭煲",
+                            "data_api_name": "rice_cooker_power_kitchen"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["煮饭", "煮粥", "保温"],
+                            "description": "选择电饭煲模式",
+                            "data_api_name": "rice_cooker_mode_kitchen"
+                        }
+                    ]
+                },
+                {
+                    "name": "电烤箱",
+                    "type": "厨具",
+                    "unique_id": "oven_kitchen",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭电烤箱",
+                            "data_api_name": "oven_power_kitchen"
+                        },
+                        {
+                            "name": "温度",
+                            "type": "int",
+                            "range": [100, 250],
+                            "description": "调节温度",
+                            "data_api_name": "oven_temperature_kitchen"
+                        },
+                        {
+                            "name": "时间",
+                            "type": "int",
+                            "range": [0, 60],
+                            "description": "设置烘烤时间",
+                            "data_api_name": "oven_time_kitchen"
+                        }
+                    ]
+                },
+                {
+                    "name": "抽油烟机",
+                    "type": "环境",
+                    "unique_id": "range_hood_kitchen",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭抽油烟机",
+                            "data_api_name": "range_hood_power_kitchen"
+                        },
+                        {
+                            "name": "风速",
+                            "type": "enum",
+                            "range": ["低", "中", "高"],
+                            "description": "调节风速",
+                            "data_api_name": "range_hood_fan_speed_kitchen"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "浴室",
+            "furniture": [
+                {
+                    "name": "热水器",
+                    "type": "洗浴",
+                    "unique_id": "water_heater_bathroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭热水器",
+                            "data_api_name": "water_heater_power_bathroom"
+                        },
+                        {
+                            "name": "温度",
+                            "type": "int",
+                            "range": [30, 75],
+                            "description": "调节水温",
+                            "data_api_name": "water_heater_temperature_bathroom"
+                        }
+                    ]
+                },
+                {
+                    "name": "浴霸",
+                    "type": "洗浴",
+                    "unique_id": "bath_heater_bathroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭浴霸",
+                            "data_api_name": "bath_heater_power_bathroom"
+                        },
+                        {
+                            "name": "风速",
+                            "type": "enum",
+                            "range": ["低", "中", "高"],
+                            "description": "调节风速",
+                            "data_api_name": "bath_heater_fan_speed_bathroom"
+                        }
+                    ]
+                },
+                {
+                    "name": "洗衣机",
+                    "type": "人居",
+                    "unique_id": "washing_machine_bathroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭洗衣机",
+                            "data_api_name": "washing_machine_power_bathroom"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["标准", "快速", "大件", "婴儿"],
+                            "description": "选择洗衣模式",
+                            "data_api_name": "washing_machine_mode_bathroom"
+                        }
+                    ]
+                },
+                {
+                    "name": "智能马桶",
+                    "type": "人居",
+                    "unique_id": "smart_toilet_bathroom",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭智能马桶",
+                            "data_api_name": "smart_toilet_power_bathroom"
+                        },
+                        {
+                            "name": "冲洗模式",
+                            "type": "enum",
+                            "range": ["标准", "强力", "节水"],
+                            "description": "选择冲洗模式",
+                            "data_api_name": "smart_toilet_flush_mode_bathroom"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "儿童房",
+            "furniture": [
+                {
+                    "name": "空调",
+                    "type": "环境",
+                    "unique_id": "ac_kids_room",
+                    "status": [
+                        {
+                            "name": "温度",
+                            "type": "int",
+                            "range": [16, 30],
+                            "description": "调节温度",
+                            "data_api_name": "ac_temperature_kids_room"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["制冷", "制热", "除湿", "送风"],
+                            "description": "选择空调模式",
+                            "data_api_name": "ac_mode_kids_room"
+                        },
+                        {
+                            "name": "风速",
+                            "type": "enum",
+                            "range": ["低", "中", "高"],
+                            "description": "调节风速",
+                            "data_api_name": "ac_fan_speed_kids_room"
+                        }
+                    ]
+                },
+                {
+                    "name": "吊灯",
+                    "type": "照明",
+                    "unique_id": "chandelier_kids_room",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭吊灯",
+                            "data_api_name": "chandelier_power_kids_room"
+                        },
+                        {
+                            "name": "亮度",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节亮度",
+                            "data_api_name": "chandelier_brightness_kids_room"
+                        }
+                    ]
+                },
+                {
+                    "name": "电视",
+                    "type": "娱乐",
+                    "unique_id": "tv_kids_room",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭电视",
+                            "data_api_name": "tv_power_kids_room"
+                        },
+                        {
+                            "name": "亮度",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节亮度",
+                            "data_api_name": "tv_brightness_kids_room"
+                        },
+                        {
+                            "name": "频道",
+                            "type": "enum",
+                            "range": ["CCTV1", "CCTV2", "CCTV3", "CCTV4", "CCTV5", "CCTV6", "CCTV7", "CCTV8", "CCTV9", "CCTV10"],
+                            "description": "调节频道",
+                            "data_api_name": "tv_channel_kids_room"
+                        }
+                    ]
+                },
+                {
+                    "name": "音响",
+                    "type": "娱乐",
+                    "unique_id": "speaker_kids_room",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭音响",
+                            "data_api_name": "speaker_power_kids_room"
+                        },
+                        {
+                            "name": "音量",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节音量",
+                            "data_api_name": "speaker_volume_kids_room"
+                        }
+                    ]
+                },
+                {
+                    "name": "监控探头",
+                    "type": "安全",
+                    "unique_id": "camera_kids_room",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭监控探头",
+                            "data_api_name": "camera_power_kids_room"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["监控", "休眠"],
+                            "description": "选择监控模式",
+                            "data_api_name": "camera_mode_kids_room"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "书房",
+            "furniture": [
+                {
+                    "name": "空调",
+                    "type": "环境",
+                    "unique_id": "ac_study",
+                    "status": [
+                        {
+                            "name": "温度",
+                            "type": "int",
+                            "range": [16, 30],
+                            "description": "调节温度",
+                            "data_api_name": "ac_temperature_study"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["制冷", "制热", "除湿", "送风"],
+                            "description": "选择空调模式",
+                            "data_api_name": "ac_mode_study"
+                        },
+                        {
+                            "name": "风速",
+                            "type": "enum",
+                            "range": ["低", "中", "高"],
+                            "description": "调节风速",
+                            "data_api_name": "ac_fan_speed_study"
+                        }
+                    ]
+                },
+                {
+                    "name": "吊灯",
+                    "type": "照明",
+                    "unique_id": "chandelier_study",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭吊灯",
+                            "data_api_name": "chandelier_power_study"
+                        },
+                        {
+                            "name": "亮度",
+                            "type": "int",
+                            "range": [0, 100],
+                            "description": "调节亮度",
+                            "data_api_name": "chandelier_brightness_study"
+                        }
+                    ]
+                },
+                {
+                    "name": "电脑",
+                    "type": "办公",
+                    "unique_id": "computer_study",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭电脑",
+                            "data_api_name": "computer_power_study"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["办公", "娱乐", "休眠"],
+                            "description": "选择电脑模式",
+                            "data_api_name": "computer_mode_study"
+                        }
+                    ]
+                },
+                {
+                    "name": "路由器",
+                    "type": "办公",
+                    "unique_id": "router_study",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭路由器",
+                            "data_api_name": "router_power_study"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["正常", "省电", "休眠"],
+                            "description": "选择路由器模式",
+                            "data_api_name": "router_mode_study"
+                        }
+                    ]
+                },
+                {
+                    "name": "打印机",
+                    "type": "办公",
+                    "unique_id": "printer_study",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭打印机",
+                            "data_api_name": "printer_power_study"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["打印", "复印", "扫描"],
+                            "description": "选择打印机模式",
+                            "data_api_name": "printer_mode_study"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "中性空间",
+            "furniture": [
+                {
+                    "name": "智能门禁",
+                    "type": "安全",
+                    "unique_id": "smart_door_lock_neutral_space",
+                    "status": [
+                        {
+                            "name": "开启",
+                            "type": "bool",
+                            "description": "开启或关闭智能门禁",
+                            "data_api_name": "smart_door_lock_power_neutral_space"
+                        },
+                        {
+                            "name": "模式",
+                            "type": "enum",
+                            "range": ["正常", "锁定", "访客"],
+                            "description": "选择门禁模式",
+                            "data_api_name": "smart_door_lock_mode_neutral_space"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
